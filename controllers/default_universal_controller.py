@@ -46,6 +46,8 @@ class ControllerREST(http.Controller):
     @http.route('/api/<string:model_name>', methods=['GET'], type='http', auth='none', cors=rest_cors_value)
     @check_permissions
     def api__model_name__GET(self, model_name, **kw):
+        _logger.info("kw")
+        _logger.info(kw)
         model_available, schema, pre_schema, _ = self.define_schema_params(request, model_name, 'read_all')
         if not model_available:
             return error_response_501__model_not_available()

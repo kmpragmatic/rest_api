@@ -6,7 +6,7 @@ import time
 _logger = logging.getLogger(__name__)
 
 
-# List of REST resources in current file:
+
 #   (url prefix)            (method)     (action)
 # /api/auth/get_tokens        GET     - Login in Odoo and get access tokens
 # /api/auth/refresh_token     POST    - Refresh access token
