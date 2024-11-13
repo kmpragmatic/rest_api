@@ -85,7 +85,7 @@ class ControllerREST(http.Controller):
         model_available, schema, _, default_vals = self.define_schema_params(request, model_name, 'create_one')
         if not model_available:
             return error_response_501__model_not_available()
-        _logger.debug('schema == %s; default_vals == %s' % (schema, default_vals))
+        _logger.info('schema == %s; default_vals == %s' % (schema, default_vals))
         return wrap__resource__create_one(
             modelname = model_name,
             default_vals = default_vals,

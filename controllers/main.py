@@ -291,6 +291,10 @@ def wrap__resource__read_one(modelname, id, success_code, OUT_fields, pre_schema
 
 def wrap__resource__create_one(modelname, default_vals, success_code, OUT_fields=('id',)):
     # Get request parameters from url
+    _logger.info("request.httprequest.args")
+    _logger.info(request.httprequest.args)
+    _logger.info("request.httprequest.data")
+    _logger.info(request.httprequest.data)
     args = {}
     for key, val in request.httprequest.args.items():
         try: val = literal_eval(val)
